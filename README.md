@@ -13,13 +13,13 @@ makeやshの使い方については有識者に問い合わせをお願いし�
 以下，sourceの説明
 
 -----------------
-    new_smc.h
+・new_smc.h
    
 classや汎用関数の定義(common名前空間)
 
 -----------------
 -----------------
-    resize_operator.cpp
+・resize_operator.cpp
     
 seamcarving関数で縮小処理を行う
 大まかな処理手順は2019年度修士2年 大和田の修論パワポをチェック
