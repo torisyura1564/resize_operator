@@ -10,8 +10,11 @@ linuxで下記のコマンドを入力します
 同一ディレクトリに
 
 ・resize/
+
 ・seam_band_image/
+
 ・./resize_process/resize/(入力画像のファイル名)
+
 ・./resize_process/seam/(入力画像のファイル名)
 
 が必要
