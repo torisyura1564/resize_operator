@@ -7,17 +7,12 @@ linuxで下記のコマンドを入力します
     make
     sh run.sh
 
-同一ディレクトリに
+requirements
 
-・resize/
-
-・seam_band_image/
-
-・./resize_process/resize/(入力画像のファイル名)
-
-・./resize_process/seam/(入力画像のファイル名)
-
-が必要
+    mkdir resize/
+    mkdir seam_band_image/
+    mkdir resize_process/resize/(入力画像のファイル名)/
+    mkdir resize_process/seam/(入力画像のファイル名)/
 
 makeやshの使い方については有識者に問い合わせをお願いします
 
