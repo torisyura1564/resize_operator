@@ -18,7 +18,6 @@ makeやshの使い方については有識者に問い合わせをお願いし�
 classや汎用関数の定義(common名前空間)
 
 -----------------
------------------
 ・resize_operator.cpp
     
 seamcarving関数で縮小処理を行う
