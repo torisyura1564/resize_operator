@@ -1,6 +1,6 @@
 # 帯状シームによる縮小サムシング
 
-※工事中．修論で発表したMulti-operatorについても入れる予定
+※工事中．
 
 ## belt-like_seam_and_seamcarving
 帯状シームによる画像の縮小とシームカービングによる画像の縮小を行うsourceです
