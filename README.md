@@ -83,9 +83,9 @@ belt-like_seam_and_seamcarvingとほぼ同様．bilateral filterの実装が追�
 
 * マスク内のオブジェクトの個数の数え上げ，オブジェクト毎にマスクを自動的に作成するのに一苦労．main関数内で以下の処理を行っている．
 
-    1．オブジェクト毎に色がついてるため，色数を数える．
-    2．オブジェクトの数をparam->color_numに格納して，マスクと残存率，判定用重みのコンテナを個数分作成．
-    3．tupleとcolor_numを駆使して，マスクを作成．
+    1．オブジェクト毎に色がついてるため，色数を数える．<br>
+    2．オブジェクトの数をparam->color_numに格納して，マスクと残存率，判定用重みのコンテナを個数分作成．<br>
+    3．tupleとcolor_numを駆使して，マスクを作成．<br>
 
 * filter parameterは画像ごとに最適化した結果を使用している．(誤ってparameterを最適化するためのprogramはdeleteしてしまいました．Multi-Operatorのプログラムを少し改造すると作成できます．詳細は以下参照)
 
