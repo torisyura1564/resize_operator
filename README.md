@@ -3,10 +3,11 @@
 ※工事中．
 
 ## belt-like_seam_and_seamcarving
-帯状シームによる画像の縮小とシームカービングによる画像の縮小を行うsourceです
+帯状シームによる画像の縮小&シームカービングを実装したsourceです
 
-linuxで下記のコマンドを入力します
+Enter the following command in any calculate machine
 
+    cd belt-like_seam_and_seamcarving
     make
     sh run.sh
 
@@ -17,8 +18,13 @@ requirements
     mkdir resize_process/resize/(入力画像のファイル名)/
     mkdir resize_process/seam/(入力画像のファイル名)/
 
-makeやshの使い方については有識者に問い合わせをお願いします
+・make
+-コンパイルを行うコマンド(複数ファイルをまとめて実行ファイルにしたいときに便利)
+-makeの流れは以下の図を参照を参照。
 
+<div align="center">
+<img src="https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/01/prog-flow.png" alt="属性" title="makeの流れ">
+</div>
 
 ・new_smc.h
    
