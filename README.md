@@ -20,11 +20,18 @@ requirements
 
 ・make
 -コンパイルを行うコマンド(複数ファイルをまとめて実行ファイルにしたいときに便利)
--makeの流れは以下の図を参照を参照。
+-makeの流れは以下の図を参照。
 
 <div align="center">
 <img src="https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/01/prog-flow.png" alt="属性" title="makeの流れ">
 </div>
+
+[引用サイト(https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/02-intro01.html)](https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/02-intro01.html)
+
+* 上図は単一のcppをmakeした場合．複数cppをmakeしたい場合はそれぞれの.oを作成した後にリンクで結合．
+
+-新たに.cppを追加する必要はないのでMakefileに変更を加える必要は特になし．
+
 
 ・new_smc.h
    
