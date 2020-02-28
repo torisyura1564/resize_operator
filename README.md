@@ -63,7 +63,7 @@ requirements
     mkdir resize/uniform_ratio
     mkdir resize/scaling/
 
------------------
+
 ・new_smc.h
    
 belt-like_seam_and_seamcarvingとほぼ同様．bilateral filterの実装が追加されている．
