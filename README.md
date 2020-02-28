@@ -19,7 +19,7 @@ requirements
 
 makeやshの使い方については有識者に問い合わせをお願いします
 
------------------
+
 ・new_smc.h
    
 classや汎用関数の定義(common名前空間)
@@ -92,6 +92,3 @@ belt-like_seam_and_seamcarvingとほぼ同様．bilateral filterの実装が追�
 * filter parameterは画像ごとに最適化した結果を使用している．(誤ってparameterを最適化するためのprogramはdeleteしてしまいました．Multi-Operatorのプログラムを少し改造すると作成できます．詳細は以下参照)
 
 * 帯状シームで削り終わった画像はresize/uniform_ratioに，スケーリング後の画像はresize/scalingに格納．
-
------------------
-
