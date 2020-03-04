@@ -64,9 +64,11 @@ requirements
 <img src="https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/01/prog-flow.png" alt="属性" title="makeの流れ">
 </div>
 
-            [引用サイト(https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/02-intro01.html)](https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/02-intro01.html)
+<div style="text-align: center;">
+[引用サイト(https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/02-intro01.html)](https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/02-intro01.html)
 
-                (上図は単一のcppをmakeした場合．複数cppをmakeしたい場合はそれぞれの.oを作成した後にリンクで結合．)
+(上図は単一のcppをmakeした場合．複数cppをmakeしたい場合はそれぞれの.oを作成した後にリンクで結合．)
+
 
 
 ### ファイル詳細  
