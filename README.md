@@ -94,7 +94,7 @@ headerも含めて800行無いので解説無し．（ある程度C言語の知�
 ### abstract
 帯状シームによる縮小と線形スケーリングの併用による画像の縮小を行うsourceです．  
 (※注) オブジェクトマスクを利用するため，縮小対象画像等はsampleディレクトリに入れてます．  
-動作方法はbelt-like_seam_and_seamcarvingと同様のため，割愛．　　
+動作方法はbelt-like_seam_and_seamcarvingと同様のため，割愛．  
 大まかな処理手順は2019年度修士2年 大和田の修論パワポをチェック  
 
 ### requirements
