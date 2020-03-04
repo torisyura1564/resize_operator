@@ -68,6 +68,7 @@ requirements
 [引用サイト(https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/02-intro01.html)](https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/02-intro01.html)
 
 (上図は単一のcppをmakeした場合．複数cppをmakeしたい場合はそれぞれの.oを作成した後にリンクで結合．)
+</div>
 
 
 
