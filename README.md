@@ -3,6 +3,7 @@
 ※工事中．
 
 ## belt-like_seam_and_seamcarving
+大まかな処理手順は2019年度修士2年 大和田の修論パワポをチェック
 
 ### abstract
 帯状シームによる画像の縮小&シームカービングを実装したsourceです  
@@ -30,7 +31,7 @@ exeを起動し，好みの場所に解凍．(PATHへの追加しやすさから
 4．次のリンク[opencv環境構築](https://blog.tukuyo.net/entry/2018/10/04/233140)を参考にライブラリをプロパティに設定  
   (Debag modeだと遅いため，Release推奨)  
 5．プロパティ内のリンカー→システム→サブシステムをコンソールに設定  
-6．.cppのmain関数先頭にあるforループを変更する． (コマンドライン引数の設定が使えない子のため) 
+6．.cppのmain関数先頭にあるforループを変更する． (コマンドライン引数の設定が使えない子のため) 　
 7．repos\(プロジェクト名)に以下を追加
 
     mkdir resize/
@@ -64,7 +65,7 @@ requirements
 <img src="https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/01/prog-flow.png" alt="属性" title="makeの流れ">
 </div>
 
-<div style="text-align:center">
+<div align="center">
     <a href="https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/02-intro01.html">引用サイト(https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/02-intro01.html)</a>
     <br>
 (上図は単一のcppをmakeした場合．複数cppをmakeしたい場合はそれぞれの.oを作成した後にリンクで結合．)
@@ -72,65 +73,48 @@ requirements
 
 
 
-### ファイル詳細  
-・new_smc.h
-   
-classや汎用関数の定義(common名前空間)
+### ファイル詳細    
+#### new_smc.h
+・classや汎用関数の定義(common名前空間)  
 
-<br>
+#### resize_operator.cpp
+・seamcarving関数で縮小処理を行う
 
-・resize_operator.cpp
-    
-seamcarving関数で縮小処理を行う
-
-大まかな処理手順は2019年度修士2年 大和田の修論パワポをチェック
-
-<br>
 headerも含めて800行無いので解説無し．（ある程度C言語の知識があれば，1週間で8割読めると踏んでます）
 
 以下，実装に関してのPoint
 
-* 垂直方向のパス探索のみ関数を定義し，水平方向の探索は転置を行うことで実現
-
-* 画面両端をシームとして選択することを禁止している（本当は選択するべき．理由は画面外を選択しないようにする配慮（過去の先輩談）．どなたか実装お願いします）
-
-* 帯状シームは固定長のため，帯の左端の画素を代表画素とすることで，シームカービングと同様の関数で取り扱うことができる
-
-* namespaceを事前定義しない主義のため，デバッグ作業やSTL使用のときは注意
+* 垂直方向のパス探索のみ関数を定義し，水平方向の探索は転置を行うことで実現  
+* 画面両端をシームとして選択することを禁止している（本当は選択するべき．理由は画面外を選択しないようにする配慮（過去の先輩談）．どなたか実装お願いします）  
+* 帯状シームは固定長のため，帯の左端の画素を代表画素とすることで，シームカービングと同様の関数で取り扱うことができる  
+* namespaceを事前定義しない主義のため，デバッグ作業やSTL使用のときは注意  
 
 -----------------
 
 
 ## Multi-Operator
-帯状シームによる画像の縮小と線形スケーリングの併用による画像の縮小を行うsourceです．
 
-(※注) オブジェクトマスクを利用するため，縮小対象画像等はsampleディレクトリに入れてます．
+### abstract
+帯状シームによる縮小と線形スケーリングの併用による画像の縮小を行うsourceです．  
+(※注) オブジェクトマスクを利用するため，縮小対象画像等はsampleディレクトリに入れてます．  
+動作方法はbelt-like_seam_and_seamcarvingと同様のため，割愛．　　
+大まかな処理手順は2019年度修士2年 大和田の修論パワポをチェック  
 
-linuxで下記のコマンドを入力します
-
-    make
-    sh run.sh
-
-requirements
+### requirements
 
     mkdir resize/uniform_ratio
     mkdir resize/scaling/
 
 
-・new_smc.h
-   
-belt-like_seam_and_seamcarvingとほぼ同様．bilateral filterの実装が追加されている．
+### ファイル詳細
+#### new_smc.h
+belt-like_seam_and_seamcarvingとほぼ同様．エッジ保持平滑化フィルタのBilateralFilterの実装が追加されている． 
+(opencvの実装を使わない理由は色成分を量子化したり，カーネルの範囲が正方形になってなかったりしてるため)  
 
-<br>
 
-・Multi-Operator.cpp
-    
-帯状シームによりアスペクト比を揃えつつ縮小．判定によりスケーリングに切り替え．
-
-大まかな処理手順は2019年度修士2年 大和田の修論パワポをチェック
-
-<br>
-帯状シームからの追加コードが200行にも満たないのでこちらも解説無し．
+#### Multi-Operator.cpp
+帯状シームによりアスペクト比を揃えつつ縮小．判定によりスケーリングに切り替え．  
+帯状シームからの追加コードが200行にも満たないのでこちらも解説無し．  
 
 以下，実装に関してのPoint
 
