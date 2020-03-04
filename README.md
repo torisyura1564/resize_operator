@@ -4,26 +4,45 @@
 
 ## belt-like_seam_and_seamcarving
 
-### abstract
+### abstract  
 帯状シームによる画像の縮小&シームカービングを実装したsourceです  
 処理が軽い方(?)なので，自分のPCでも回せます． Visual Studioと計算機での回し方について以下記します．
 
-### Visual Studio編
-requirements  
-    Visual Studio 2015以上
-    opencv-3.x (opencv-4.xは定数マクロに名前空間が付与するため，少々の変更要)
+### Visual Studio編  
+・requirements  
+    Visual Studio 2015以上  
+    opencv-3.x (opencv-4.xは定数マクロに名前空間が付与するため，少々の変更要)  
 
 ・Visual Studioのインストール  
 大学のライセンスでEnterprise(?)がインストールできるかと思いますが，私はCommunityでやってました．
-Visual Studioでアプリ開発，サーバー構築が出来るため，ワークロードをどうするかという項目がありますが特にチェックせずにinstall．  
+Visual Studioでアプリ開発，サーバー構築が出来るためワークロードをどうするかという項目がありますが，特にチェックせずにinstall．  
 
 ・opencvのインストール
-次のリンク[opencvをgithubからinstall](https://github.com/opencv/opencv/releases) から好きなversionの **.exeファイル** ファイルをダウンロード．
+次のリンク[opencvをgithubからinstall](https://github.com/opencv/opencv/releases) から好きなversionの **.exeファイル** ファイルをダウンロード．  
+exeを起動し，好みの場所に解凍．(PATHへの追加しやすさから，Cドライブ直下に置くと良し)    
+環境変数のPATHに'C:\opencv\build\bin'と'C:\opencv\build\x64\vc14(15でもおｋ)\bin'を追加  
+
+・プログラム動作への準備  
+1．Visual Studioを起動し，ファイル→新規作成→プロジェクトをクリックし，空のプロジェクトを選択して適当なプロジェクト名で作成．  
+2．C:\ユーザー\(自分のユーザー名)\source\repos にプロジェクトが作成される．  
+3．Visual Studio上でソースファイルに.cppファイルをドラッグ．ヘッダファイルに.hファイルをドラッグ  
+  (ドラッグするファイルをrepos\(プロジェクト名) に置いても良い)  
+4．次のリンク[opencv環境構築](https://blog.tukuyo.net/entry/2018/10/04/233140)を参考にライブラリをプロパティに設定  
+  (Debag modeだと遅いため，Release推奨)  
+5．プロパティ内のリンカー→システム→サブシステムをコンソールに設定  
+6．.cppのmain関数先頭にあるforループを変更する． (コマンドライン引数の設定が使えない子のため) 
+7．repos\(プロジェクト名)に以下を追加
+
+    mkdir resize/
+    mkdir seam_band_image/
+    mkdir resize_process/resize/(入力画像のファイル名)/
+    mkdir resize_process/seam/(入力画像のファイル名)/
 
 
+・実行  
+ビルド→デバッグなしで開始  
 
-    
-
+### Linux編
 Enter the following **linux** command in any calculate machine of matsuda-labo
 
     cd belt-like_seam_and_seamcarving
@@ -50,7 +69,7 @@ requirements
 * 上図は単一のcppをmakeした場合．複数cppをmakeしたい場合はそれぞれの.oを作成した後にリンクで結合．
 - 新たに.cppを追加する必要はないのでMakefileに変更を加える必要は特になし．
 
-
+### ファイル詳細  
 ・new_smc.h
    
 classや汎用関数の定義(common名前空間)
