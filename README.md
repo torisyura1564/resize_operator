@@ -65,10 +65,7 @@ requirements
 </div>
 
 <div style="text-align: center;">
-    <a href="https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/02-intro01.html">
-引用サイト(https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/02-intro01.html)
-    </a>
-
+    <a href="https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/02-intro01.html">引用サイト(https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/02-intro01.html)</a>
 (上図は単一のcppをmakeした場合．複数cppをmakeしたい場合はそれぞれの.oを作成した後にリンクで結合．)
 </div>
 
