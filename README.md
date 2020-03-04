@@ -3,9 +3,28 @@
 ※工事中．
 
 ## belt-like_seam_and_seamcarving
-帯状シームによる画像の縮小&シームカービングを実装したsourceです
 
-Enter the following command in any calculate machine
+### abstract
+帯状シームによる画像の縮小&シームカービングを実装したsourceです  
+処理が軽い方(?)なので，自分のPCでも回せます． Visual Studioと計算機での回し方について以下記します．
+
+### Visual Studio編
+requirements  
+    Visual Studio 2015以上
+    opencv-3.x (opencv-4.xは定数マクロに名前空間が付与するため，少々の変更要)
+
+・Visual Studioのインストール  
+大学のライセンスでEnterprise(?)がインストールできるかと思いますが，私はCommunityでやってました．
+Visual Studioでアプリ開発，サーバー構築が出来るため，ワークロードをどうするかという項目がありますが特にチェックせずにinstall．  
+
+・opencvのインストール
+次のリンク[opencvをgithubからinstall](https://github.com/opencv/opencv/releases) から好きなversionの **.exeファイル** ファイルをダウンロード．
+
+
+
+    
+
+Enter the following **linux** command in any calculate machine of matsuda-labo
 
     cd belt-like_seam_and_seamcarving
     make
