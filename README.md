@@ -39,11 +39,11 @@ exeを起動し，好みの場所に解凍．(PATHへの追加しやすさから
     mkdir resize_process/seam/(入力画像のファイル名)/
 
 
-・実行  
+#### 実行  
 ビルド→デバッグなしで開始  
 
 ### Linux編
-Enter the following **linux** command in any calculate machine of matsuda-labo
+以下のコマンドを入力することで実行可能．makeの後エラー文の出力が無くMKSMCファイルが出力されていることを確認．
 
     cd belt-like_seam_and_seamcarving
     make
@@ -56,7 +56,7 @@ requirements
     mkdir resize_process/resize/(入力画像のファイル名)/
     mkdir resize_process/seam/(入力画像のファイル名)/
 
-・make
+#### make
 - コンパイルを行うコマンド(複数ファイルをまとめて実行ファイルにしたいときに便利)
 - makeの流れは以下の図を参照。
 
@@ -64,10 +64,10 @@ requirements
 <img src="https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/01/prog-flow.png" alt="属性" title="makeの流れ">
 </div>
 
-[引用サイト(https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/02-intro01.html)](https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/02-intro01.html)
+            [引用サイト(https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/02-intro01.html)](https://brain.cc.kogakuin.ac.jp/~kanamaru/lecture/prog1/02-intro01.html)
 
-* 上図は単一のcppをmakeした場合．複数cppをmakeしたい場合はそれぞれの.oを作成した後にリンクで結合．
-- 新たに.cppを追加する必要はないのでMakefileに変更を加える必要は特になし．
+                (上図は単一のcppをmakeした場合．複数cppをmakeしたい場合はそれぞれの.oを作成した後にリンクで結合．)
+
 
 ### ファイル詳細  
 ・new_smc.h
